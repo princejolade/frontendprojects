@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle {
+    width: 15rem;
+    height: 5rem;
+    background-color: #e24848;
+    border-radius: 5rem;
+    box-shadow: inset 0 .2rem 1rem #555;
+    position: relative;
+    transition: background-color .5s;
+}
+
+.circle {
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    border: 2.7rem solid #fff;
+    position: absolute;
+    top: -.4rem;
+    left: -.5rem;
+    box-shadow: 0 0 .5rem #aaa;
+    transition: left .5s;
+}
+
+#check:checked + .toggle .circle {
+    left: calc(100% - 5.2rem);
+}
+
+#check:checked + .toggle {
+    background-color: #3eb963;
+}
